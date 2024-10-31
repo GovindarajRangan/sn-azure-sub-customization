@@ -2,7 +2,7 @@
 ## Resource Groups
 
 module "resource_groups" {
-  source = "../modules/resource-groups"
+  source = "./modules/resource-groups"
 
   for_each = { for rg in var.resource_groups : rg.rg_name => rg }
   rg_name  = each.value.rg_name
@@ -12,7 +12,7 @@ module "resource_groups" {
 ### Virtual Networks
 
 module "vnets" {
-  source = "../modules/virtual-networks"
+  source = "./modules/virtual-networks"
 
   for_each            = { for vnets in var.vnets : vnets.name => vnets }
   name                = each.value.name
@@ -27,7 +27,7 @@ module "vnets" {
 ### Subnets
 
 module "subnets" {
-  source = "../modules/subnets"
+  source = "./modules/subnets"
 
   for_each             = { for subnets in var.subnets : subnets.name => subnets }
   name                 = each.value.name
@@ -41,7 +41,7 @@ module "subnets" {
 ### Network Security Group / Rules
 
 module "nsg" {
-  source = "../modules/nsg"
+  source = "./modules/nsg"
 
   nsg_rules = var.nsg_rules
   nsg       = var.nsg
@@ -52,7 +52,7 @@ module "nsg" {
 ### Route Tables
 
 module "route_tables" {
-  source = "../modules/route-tables"
+  source = "./modules/route-tables"
 
   for_each = { for routes in var.route_tables : routes.name => routes }
 
