@@ -1,3 +1,8 @@
+variable "subscription_id" {
+  description = "Subscription ID"
+  type = string
+}
+
 ### Common tags
 
 variable "common_tags" {

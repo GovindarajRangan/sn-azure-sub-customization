@@ -1,4 +1,5 @@
 
+subscription_id = "108b20ee-f7b8-4541-af7e-c39e604732e0"
 ## Common Tags
 
 common_tags = {
