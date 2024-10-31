@@ -7,6 +7,12 @@ terraform {
       version = "=4.1.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name = "tfstate"
+    storage_account_name = "ciabdemotfstatebackend"
+    container_name = "tfstate"
+    key = "${terraform.workspace}/terraform.tfstate"
+  }
 }
 
 # Configure the Microsoft Azure Provider
