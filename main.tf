@@ -94,6 +94,8 @@ module "vms" {
   resource_group_name = each.value.resource_group_name
   vnet_name = each.value.vnet_name
   subnet_name = each.value.subnet_name
+
+  depends_on = [ module.resource_groups, module.vnets, module.subnets ]
 }
 
 
