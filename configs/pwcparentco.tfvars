@@ -156,7 +156,7 @@ virtual_machines = [
   {
     vm_hostname = "demo-vm-1"
     os_disk_size = 30
-    admin_username = "admin"
+    admin_username = "ciabadmin"
     admin_password = "P@ss@word@123"
     resource_group_name = "parentco-network-rg-eastus"
     vnet_name = "parentco-lz-vnet-01"
