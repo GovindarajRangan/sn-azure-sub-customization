@@ -80,7 +80,7 @@ route_tables = [
     name                          = "carveco-lz-routetable-01"
     resource_group_name           = "carveco-network-rg-eastus"
     disable_bgp_route_propagation = false
-    subnet         = "carveco-lz-subnet-02"
+    subnet         = "carveco-lz-subnet-01"
     vnet_name      = "carveco-lz-vnet-01"
     routes = [
       {
@@ -152,13 +152,4 @@ budget_details = [
 # ]
 
 virtual_machines = [
-  {
-    vm_hostname = "demo-vm-1"
-    os_disk_size = 30
-    admin_username = "admin"
-    admin_password = "P@ss@word@123"
-    resource_group_name = "carveco-vms-rg-eastus"
-    vnet_name = "carveco-lz-vnet-01"
-    subnet_name = "carveco-lz-subnet-01"
-  }
 ]

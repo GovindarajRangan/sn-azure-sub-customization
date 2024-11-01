@@ -11,7 +11,8 @@ WORKSPACE=$1
 
 # Set your environment variables
 RESOURCE_GROUP="tfstate"
-STORAGE_ACCOUNT="ciabdemotfstatebackend"
+STORAGE_ACCOUNT="tfstate$WORKSPACE"
+# STORAGE_ACCOUNT="ciabdemotfstatebackend"
 CONTAINER="tfstate"
 
 # Run terraform init with backend config dynamically set
