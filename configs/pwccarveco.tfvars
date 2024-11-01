@@ -126,7 +126,7 @@ budget_details = [
 
 ### RBAC Roles
 
-# role_definitions = [
+role_definitions = [
 #   {
 #     role_definition_name = "00000000-0000-0000-0000-000000000001"
 #     scope                = "/subscriptions/731257cc-4ff2-4612-b6b0-3463b086522f"
@@ -134,9 +134,9 @@ budget_details = [
 #     not_actions          = ["*"]
 #     assignable_scopes    = ["/subscriptions/731257cc-4ff2-4612-b6b0-3463b086522f"]
 #   }
-# ]
+]
 
-# role_assignments = [
+role_assignments = [
 #   { name                   = "00000000-0000-0000-0000-000000000003"
 #     role_definition_name   = "00000000-0000-0000-0000-000000000001"
 #     principal_id           = "429a5f5f-5764-4031-a7f4-a0a499fc3c52"
@@ -149,7 +149,7 @@ budget_details = [
 #     scope                  = "/subscriptions/731257cc-4ff2-4612-b6b0-3463b086522f"
 #     custom_role_definition = false
 #   }
-# ]
+]
 
 virtual_machines = [
 ]
