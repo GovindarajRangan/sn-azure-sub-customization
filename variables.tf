@@ -136,3 +136,15 @@ variable "role_assignments" {
     custom_role_definition = bool
   }))
 }
+
+variable "virtual_machines" {
+  type = list(object({
+    vm_hostname = string
+    os_disk_size = number
+    admin_username = string
+    admin_password = string
+    resource_group_name = string
+    vnet_name = string
+    subnet_name = string
+  }))
+}

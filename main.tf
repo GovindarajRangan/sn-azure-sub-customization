@@ -83,6 +83,19 @@ module "budget" {
 
 }
 
+module "vms" {
+  source = "./modules/vm"
+
+  for_each = { for vm in var.virtual_machines : vm.vm_hostname => vm}
+  vm_hostname = each.value.vm_hostname
+  os_disk_size = each.value.os_disk_size
+  admin_username = each.value.admin_username
+  admin_password = each.value.admin_password
+  resource_group_name = each.value.resource_group_name
+  vnet_name = each.value.vnet_name
+  subnet_name = each.value.subnet_name
+}
+
 
 
 ### RBAC Roles

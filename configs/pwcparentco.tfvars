@@ -12,6 +12,10 @@ resource_groups = [
   {
     rg_name  = "parentco-network-rg-eastus",
     location = "East US"
+  },
+  {
+    rg_name  = "parentco-vms-rg-eastus",
+    location = "East US"
   }
 ]
 
@@ -150,4 +154,16 @@ role_assignments = [
 #     scope                  = "/subscriptions/731257cc-4ff2-4612-b6b0-3463b086522f"
 #     custom_role_definition = false
 #   }
+]
+
+virtual_machines = [
+  {
+    vm_hostname = "demo-vm-1"
+    os_disk_size = 30
+    admin_username = "admin"
+    admin_password = "P@ss@word@123"
+    resource_group_name = "parentco-vms-rg-eastus"
+    vnet_name = "parentco-lz-vnet-01"
+    subnet_name = "parentco-lz-subnet-01"
+  }
 ]
