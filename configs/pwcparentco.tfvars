@@ -70,20 +70,7 @@ nsg_rules = [
     destination_address_prefix = "*",
     nsg_name                   = "parentco-lz-nsg-01"
     resource_group             = "parentco-network-rg-eastus"
-  },
-  {
-    name                       = "parentco-lz-nsg-rule-snet2-inbound-https"
-    access                     = "Allow",
-    protocol                   = "Tcp",
-    direction                  = "Inbound",
-    source_port_range          = "443",
-    destination_port_range     = "443",
-    priority                   = "110",
-    source_address_prefix      = "*",
-    destination_address_prefix = "*",
-    nsg_name                   = "parentco-lz-nsg-01"
-    resource_group             = "parentco-network-rg-eastus"
-  },
+  }
 ]
 
 
@@ -114,8 +101,8 @@ budget_details = [
     name          = "ParentCo-Monthly-Budget"
     budget_amount = 1000
     time_grain    = "Monthly"
-    start_date    = "2024-09-01T00:00:00Z"
-    end_date      = "2026-08-31T00:00:00Z"
+    start_date    = "2025-01-01T00:00:00Z"
+    end_date      = "2027-12-31T00:00:00Z"
 
     notifications = [
       {
