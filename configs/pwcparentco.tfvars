@@ -12,10 +12,6 @@ resource_groups = [
   {
     rg_name  = "parentco-network-rg-eastus",
     location = "East US"
-  },
-  {
-    rg_name  = "parentco-vms-rg-eastus",
-    location = "East US"
   }
 ]
 
@@ -162,7 +158,7 @@ virtual_machines = [
     os_disk_size = 30
     admin_username = "admin"
     admin_password = "P@ss@word@123"
-    resource_group_name = "parentco-vms-rg-eastus"
+    resource_group_name = "parentco-network-rg-eastus"
     vnet_name = "parentco-lz-vnet-01"
     subnet_name = "parentco-lz-subnet-01"
   }
